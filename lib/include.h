@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include "TM4C1294NCPDT.h"
+
 
 // fin  = fxtal / [(Q+1) * (N+1)]
 //      = 25MHz / [(0+1) * (4+1)] = 5MHz
@@ -39,7 +39,7 @@
 #define NVIC_ST_RELOAD_M        0x00FFFFFF  // Counter load value
 
 
-
+#include "TM4C123GH6PM.h"
 #include "PLL.h"
 #include "GPIO.h"
 #include "UART.h"

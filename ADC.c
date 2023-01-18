@@ -1,9 +1,4 @@
-/*
- * ADC.c
- *
- *  Created on: 04/11/2019
- *      Author: ravenelco
- */
+
 #include "lib/include.h"
 
 extern void Configura_Reg_ADC0(void)

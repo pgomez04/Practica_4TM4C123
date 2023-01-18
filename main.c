@@ -4,7 +4,7 @@ int main(void)
 {
 
     uint16_t Result[2];
-    float valor;
+    float valor; 
     float valor1;
     Configurar_PLL();  //Confiuracion de velocidad de reloj
     Configura_Reg_ADC0();
