@@ -2,22 +2,54 @@
 
 int main(void)
 {
+    uint16_t valor =0;
+    char c = '5', caracter =','gp;
+    int p_i, p_f;
 
-    uint16_t Result[2];
-    float valor; 
-    float valor1;
-    Configurar_PLL();  //Confiuracion de velocidad de reloj
-    Configura_Reg_ADC0();
-    Configurar_UART0();
-    //printString("3");
-    while(1)
+     Configurar_PLL(_25MHZ);  //Confiuracion de velocidad de reloj
+    Configurar_UART5();//Yo FCLK 25MHZ Baudrate 57600
+    Configurar_GPIO();
+    printChar(c);
+    printString("\n");
+
+    
+   while(1)
     {
-        PWM0
-        ADC0_InSeq2(Result); //llamada a la conversion por procesador
-        valor=(float)(((Result[0]))*3.3)/4096;
-        valor1=(float)(((Result[1]))*3.3)/4096;
-        
+         c = readChar();
+         switch(c)
+         {
+             case 'r':
+                 //GPIODATA port F 662
+                 printChar('a');
+                 GPIOF->DATA = (1<<1);
+                 break;
+             case 'b':
+                 //GPIODATA port F 662
+                 printChar('b');
+                 GPIOF->DATA = (1<<2);
+                 break;
+             case 'g':
+                 //GPIODATA port F 662
+                 printChar('c');
+                 GPIOF->DATA = (1<<3);
+                 break;
+             case 'y':
+                 //GPIODATA port F 662
+                 printChar('d');
+                 GPIOF->DATA = (1<<3) | (1<<2);
+                 break;
+             default:
+                 printChar((char)valor);
+                 GPIOF->DATA = (0<<1) | (0<<2) | (0<<3);
+                 break;
+         }
 
+        char *invertir(char delim ,int *ptm);
+         {
+            
+
+        }
+       
     }
 
 }
