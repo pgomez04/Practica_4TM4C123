@@ -1,5 +1,6 @@
 #include "lib/include.h"
 extern void Configurar_GPIO(void)
+//configuracion gpio
 {
     //Paso 1 Enceder el periferico Run Clock Gate Control GPIO
     SYSCTL->RCGCGPIO |= (1<<5);
